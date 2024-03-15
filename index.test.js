@@ -18,7 +18,7 @@ describe('Teste da API /produtos', function() {
   })
 
   test('Deve retornar 404 e um JSON no GET /produtos/id', async () => {
-    const response = await request.get("/produtos/10000");
+    const response = await request.get("/produtos/100000");
     expect(response.status).toBe(404);
     expect(response.headers['content-type']).toMatch(/json/);
   })
